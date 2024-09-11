@@ -17,6 +17,9 @@ body{
     background-image: url(images/background.png); 
     background-size: cover;
     background-position: center;
+    object-fit: fill;
+    background-attachment: fixed;
+    position: relative;
 }
 .container{
     padding: 10px 10%
@@ -60,10 +63,13 @@ nav ul li a:hover::after{
 }
 
 .header-text{
-    margin-top: 30%;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
     font-size: 30px;
     color: #fff;
-    padding-left: 600px;
+    text-align: center;
 }
 .header-text h1{
     font-size: 60px;
@@ -332,14 +338,50 @@ form .btn2{
 nav .fa-solid{
     display: none;
 }
-
-@media only screen and (max-width: 600px){
+@media only screen and (max-width: 1024px) and (min-width: 480px){
     #header{
         background-image: none;
-        background-image: url(images/phone-background.jpg); 
+        background-image: url(images/phone-background.png);
     }
     .header-text{
-        margin-top: 280px;
+        font-size: 16px;
+    }
+    .header-text h1{
+        font-size: 30px;
+    }
+    nav .fa-solid{
+        display: block;
+        font-size: 25px;
+    }
+    nav ul{
+        background: #ff004f;
+        position: fixed;
+        top: 0;
+        right: -200px;
+        width: 200px;
+        height: 100vh;
+        padding-top: 50px;
+        z-index: 2;
+        transition: right 0.5s;
+    }
+    nav ul li{
+        display: block;
+        margin: 25px;
+    }
+    nav ul .fa-solid{
+        position: absolute;
+        top: 25px;
+        left: 25px;
+        cursor: pointer;
+    }
+}
+
+@media only screen and (max-width: 480px){
+    #header{
+        background-image: none;
+        background-image: url(images/phone-background.png);
+    }
+    .header-text{
         font-size: 16px;
     }
     .header-text h1{
