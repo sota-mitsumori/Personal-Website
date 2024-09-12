@@ -345,7 +345,7 @@ nav .fa-solid{
         height: 100vh;
         background-image: url(images/phone-background.jpg);
         background-color: orange;
-        background-size: cover;
+        background-size: 100% auto;
         background-position: center;
         object-fit: fill;
         background-attachment: fixed;
