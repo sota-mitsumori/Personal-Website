@@ -105,6 +105,14 @@ nav ul li a:hover::after{
 .sub-title{
     font-size: 60px;
     font-weight: 500;
+    color: #080808;
+    font-family: 'Times New Roman';
+    font-style: normal;
+}
+
+.Aboutme{
+    font-size: 60px;
+    font-weight: 500;
     color: #fff;
     font-family: 'Times New Roman';
     font-style: normal;
@@ -159,6 +167,7 @@ nav ul li a:hover::after{
     padding: 30px 0;
     background: #f0f7ff;
 }
+
 .interest-list{
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
